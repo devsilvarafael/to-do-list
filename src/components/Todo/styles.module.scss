@@ -1,0 +1,38 @@
+.todoListStyle {
+  margin-top: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+
+  background: rgb(119, 84, 190);
+  background: linear-gradient(
+    90deg,
+    rgba(119, 84, 190, 1) 29%,
+    rgba(155, 189, 196, 1) 100%
+  );
+  color: #f8f8f8;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+
+  button {
+    border: 0;
+    background-color: #7754be;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    color: #f8f8f8;
+    margin-left: 1rem;
+
+    transition: filter 0.7s;
+
+    &:hover {
+      filter: brightness(0.6);
+    }
+  }
+}

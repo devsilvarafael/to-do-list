@@ -1,0 +1,35 @@
+.addListInput {
+    margin: 2rem auto;
+    border: 1px solid #4F6367;
+    border-radius: 0.5rem;
+    outline: none;
+    
+    width: 600px;
+    max-width: 600px;
+    
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+@media (max-width: 1080px) {
+    .addListInput {
+        max-width: 300px;
+    }
+}
+    
+#buttonSubmit {
+    padding: 0.5rem;
+    width: 130px;
+    border: 1px solid #4F6367;
+    border-radius: 0.5rem;
+    
+    background-color: #7754be;
+    color: #f8f8f8;
+    font-size: 1rem;
+    
+    transition: filter 0.7s;
+    
+    &:hover {
+        filter: brightness(0.6);
+    }
+}
