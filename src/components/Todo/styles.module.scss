@@ -3,12 +3,7 @@
   padding: 1rem 1.5rem;
   border-radius: 0.5rem;
 
-  background: rgb(119, 84, 190);
-  background: linear-gradient(
-    90deg,
-    rgba(119, 84, 190, 1) 29%,
-    rgba(155, 189, 196, 1) 100%
-  );
+  background: rgb(28, 6, 73);
   color: #f8f8f8;
 
   display: flex;
@@ -22,11 +17,10 @@
 
   button {
     border: 0;
-    background-color: #7754be;
+    background-color: #fff;
     border-radius: 100%;
     width: 30px;
     height: 30px;
-    color: #f8f8f8;
     margin-left: 1rem;
 
     transition: filter 0.7s;

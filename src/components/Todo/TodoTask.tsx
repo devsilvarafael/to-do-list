@@ -1,25 +1,36 @@
-import { ITask } from "../../interfaces/Task";
+import { TaskComponent } from "../../interfaces/Task";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
-import { AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineClose } from "react-icons/ai";
+import { MdEdit } from "react-icons/md";
 
-interface Props {
-  task: ITask;
-  completeTask(taskNameToDelete: string): void;
-}
-
-export const TodoTask = ({ task, completeTask }: Props) => {
+export const TodoTask = ({
+  taskTitle,
+  deleteTask,
+  updateTask,
+  todoColor,
+}: TaskComponent) => {
   return (
-    <div className={styles.todoListStyle}>
-        <span>{task.taskName}</span>
-      <button
-        onClick={() => {
-          completeTask(task.taskName);
-        }}
-      >
-        <AiOutlineClose size={22} />
-      </button>
+    <div
+      className={styles.todoListStyle}
+      style={{ backgroundColor: todoColor }}
+    >
+      <span>{taskTitle}</span>
+      <div>
+        <button
+          onClick={updateTask}
+          style={{ backgroundColor: "#F4AC21", color: "#FFF" }}
+        >
+          <MdEdit size={22} />
+        </button>
+        <button
+          onClick={deleteTask}
+          style={{ backgroundColor: "#f44336", color: "#fff" }}
+        >
+          <AiOutlineClose size={22} />
+        </button>
+      </div>
     </div>
   );
 };
