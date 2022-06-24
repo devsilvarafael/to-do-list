@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useRef, useState } from "react";
 import styles from "./styles.module.scss";
 
 import { Tasks } from "../../interfaces/Task";
@@ -7,6 +7,8 @@ import { TodoTask } from "../Todo/TodoTask";
 export const Input = () => {
   const [task, setTask] = useState<string>("");
   const [todo, setTodo] = useState<Tasks[]>([]);
+
+  const inputEl = useRef<HTMLInputElement>(null);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setTask(event.target.value);
@@ -22,6 +24,10 @@ export const Input = () => {
     }
 
     setTodo([...todo, newTask]);
+
+    if (null !== inputEl.current) {
+      inputEl.current.focus();
+    }
 
     setTask("");
   };
@@ -69,6 +75,7 @@ export const Input = () => {
           type="text"
           placeholder="Adicionar a lista..."
           name="task"
+          ref={inputEl}
           className={styles.addListInput}
           value={task}
           onChange={handleChange}
