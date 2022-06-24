@@ -1,6 +1,7 @@
 export interface Task {
   id: number;
   task: string | null;
+  color: string;
 }
 
 export interface Tasks {

@@ -1,3 +1,15 @@
+# To-Do List App
+
+An application created for learning purposes in React and TypeScript.
+
+In this application was used Interfaces, useState, useRef, handlers (update, create, delete), input validation, and components creation.
+
+Each task has a unique ID, and the functionalities are developed with them.
+
+To make it a little different, each task have a random background color.
+
+!['To-Do App'](./src/assets/refactoredTodo.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
